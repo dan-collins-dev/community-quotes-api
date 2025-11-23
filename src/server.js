@@ -8,10 +8,10 @@ const PORT = process.env.PORT || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const quotesPath = path.join(__dirname, "quotes.json");
+const quotesPath = path.join(__dirname,  "../quotes.json");
 const quotes = JSON.parse(fs.readFileSync(quotesPath, "utf-8"));
 
-app.use("/", express.static("./public"));
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/api", (req, res) => {
   res.status(200).json(quotes);
