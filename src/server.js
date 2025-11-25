@@ -2,6 +2,7 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +13,7 @@ const quotesPath = path.join(__dirname,  "../quotes.json");
 const quotes = JSON.parse(fs.readFileSync(quotesPath, "utf-8"));
 
 app.use(express.static(path.join(__dirname, "../public")));
+app.use(cors());
 
 app.get("/api", (req, res) => {
   res.status(200).json(quotes);
