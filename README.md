@@ -18,7 +18,7 @@ Required Tools
 In GitBash:
 
 1. Verify NodeJS and npm are installed on your machine by running `node -v` and `npm -v`. If a version number is returned for each command, these have been successfully installed.
-2. `cd` into your `projects` directory and run `git clone https://github.com/dan-collins-dev/community-quotes-api.git`
+2. `cd` into the directory of your choice and run `git clone https://github.com/dan-collins-dev/community-quotes-api.git`
 3. `cd` into the cloned repo and run `npm install` to install the required packages.
 4.  Open the project with `code .`
 5.  Run the server with `npm run dev`
