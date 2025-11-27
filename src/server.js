@@ -3,7 +3,6 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import cors from "cors";
-import { inject } from "@vercel/analytics";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,8 +23,6 @@ app.get("/api/random", (req, res) => {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   res.status(200).json(quotes[randomIndex]);
 });
-
-inject();
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
