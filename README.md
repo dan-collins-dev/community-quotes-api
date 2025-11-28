@@ -4,7 +4,7 @@ The primary purpose of this project is to explore Vercel's functionality when it
 
 ## Endpoints
 
-- `/api/` - Gets all quotes
+- `/api` - Gets all quotes
 - `/api/random` - Gets a random quote
 
 ## Running Locally
